@@ -16,10 +16,10 @@ struct AppEnvironment {
 let appReducer = Reducer<AppState, AppAction, AppEnvironment> { state, action, environment in
     switch action {
     case .upButtonTapped:
-        NotificationCenter.default.post(name: NSNotification.scrollDown, object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: NSNotification.scrollUp, object: nil, userInfo: nil)
         return .none
     case .downButtonTapped:
-        NotificationCenter.default.post(name: NSNotification.scrollUp, object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: NSNotification.scrollDown, object: nil, userInfo: nil)
         return .none
     }
 }
